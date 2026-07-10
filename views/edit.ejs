@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='/stylesheet/profile.css'>
+    
+</head>
+<body>
+    <div class="top"><a href="/profile" style="color:blue; text-decoration:none;">Back</a><a class="logout-btn" href="/logout">Logout</a></div>
+    <h2 style="font-size:22px; margin-bottom:10px;">Edit your post </h2>
+    <div class ="postcontainer">
+        <form style="flex-direction:column; display:flex; align-items: flex-start;" action="/update/<%= post._id %>" method="post">
+            <textarea class="postarea" placeholder="What's on your mind." name="postdata"><%= post.content%></textarea>
+            <button class="createbt" type="submit">Update</button>  
+        </form>   
+    </div>         
+</body>
+</html>

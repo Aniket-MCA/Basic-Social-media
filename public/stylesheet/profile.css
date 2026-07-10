@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    background:#2a2a2a;
+    color:white;
+    padding:20px;
+}
+
+.top{
+    height:50px;
+    display:flex;
+    align-items:center;
+}
+
+.logout-btn{
+    color:white;
+    background:red;
+    height:30px;
+    width:70px;
+    border-radius:8px;
+    margin-left: auto;
+    text-decoration: none;      
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.postarea{
+    background:transparent;
+    height:80px;
+    width:40vw;
+    border-radius:5px;
+    border:2px solid #888;
+    color:white;
+    padding:13px;
+    resize:none;
+    margin-bottom:5px;
+    outline:none;
+}
+
+.postcontainer{
+    display:flex;
+    flex-direction:column;
+}
+
+.createbt{
+    background: rgb(30, 159, 202);
+    border:none;
+    height:30px;
+    width:100px;
+    border-radius:5px;
+    outline:none;
+    margin-bottom:30px;
+}
+
+.posts{
+    background:#333;
+    height:90px;
+    width:40vw;
+    border-radius:5px;
+    border:2px solid #666;
+    color:white;
+    padding:13px;
+    resize:none;
+    margin-bottom:5px;
+    outline:none;
+}
+
+.like-btn{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}

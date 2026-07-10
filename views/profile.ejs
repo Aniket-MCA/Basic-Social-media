@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='stylesheet/profile.css'>
+    
+</head>
+<body>
+    <div class="top"><a class="logout-btn" href="/logout">Logout</a></div>
+    <div style="display:flex; gap:10px; margin-bottom:10px;">
+    <img style="height:60px; width:60px; border-radius:50px; object-fit:cover;" src="/images/upload/<%= founduser.profilePic %>">
+    <h1 style="display:flex; align-items:center;"><span style="color:rgb(239, 237, 237);">Hello, </span><%=founduser.name %></h1>
+    </div>
+    <h2 style="font-size:22px; margin-bottom:10px;">Create a post </h2>
+    <div class ="postcontainer">
+        <form style="flex-direction:column; display:flex; align-items: flex-start;" action="/post" method="post">
+            <textarea class="postarea" placeholder="What's on your mind." name="postdata"></textarea>
+            <button class="createbt" type="submit">Create post</button>
+        </form>   
+    </div>
+       <div style="display:flex; width:43%;">
+       <h3 style="color:#888; margin-bottom:20px; display:flex;" >Posts</h3> 
+       <a style="color:#888; font-weight:bold; margin-bottom:20px;  margin-left:auto; text-decoration:none; " href="/mypost">My Posts</a>
+       </div>
+       <% post.forEach(function(post){ %>
+        <div class="posts" >
+            <h4 style="color:rgb(46, 46, 248); margin-bottom:5px;">@<%=post.user.name%></h4>
+            <p style="margin-bottom:10px;"><%=post.content%> </p>
+            <small><%= post.likes.length %> Likes</small>
+            <div style="display:flex; flex-direction:row; gap:20px; ">
+                <a class="like-btn" style="color:white; " href="/like/<%= post._id %>">
+                         <% if (post.likes.indexOf(founduser._id) === -1) { %>
+                         🤍
+                         <% } else { %>
+                         ❤️
+                        <% } %>
+</a>
+            </div>
+       </div>  
+      <%})%>          
+</body>
+</html>
