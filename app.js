@@ -7,12 +7,21 @@ const cookieParser = require("cookie-parser");
 const jwt = require("jsonwebtoken");
 const userPost = require("./models/post");
 const multerconfig = require("./config/multerconfig");
+const dotenv = require("dotenv");
+const connectDB = require("./config/db.js");
+const dns = require("dns");
+
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
+
+dotenv.config();
 
 app.set("view engine", "ejs");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+
+connectDB();
 
 app.use(cookieParser());
 
@@ -270,6 +279,7 @@ app.use(function (err, req, res, next) {
     res.status(500).send("Something went wrong on our end.");
 });
 
-app.listen(3000, function () {
-    console.log("Server running on http://localhost:3000");
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, function () {
+    console.log(`Server running on the PORT ${PORT}`);
 });
