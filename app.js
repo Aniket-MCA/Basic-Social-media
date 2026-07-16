@@ -279,7 +279,7 @@ app.use(function (err, req, res, next) {
     res.status(500).send("Something went wrong on our end.");
 });
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, function () {
     console.log(`Server running on the PORT ${PORT}`);
 });
