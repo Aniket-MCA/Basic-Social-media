@@ -62,7 +62,7 @@ A full-stack social media web application built using <strong>Node.js</strong>, 
 ## Edit Post
 
 <p align="center">
-<img src="screenshots/edit-post.png" width="850">
+<img src="screenshots/edit.png" width="850">
 </p>
 
 ---
