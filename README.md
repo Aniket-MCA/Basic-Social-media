@@ -25,7 +25,7 @@ A full-stack social media web application built using <strong>Node.js</strong>, 
 🌍 **Live Website**
 
 **https://basic-social-media-4.onrender.com**
-<p align="center">
+<p>
   <a href="https://basic-social-media-4.onrender.com">
     <img src="https://img.shields.io/badge/Live_Demo-Visit_App-success?style=for-the-badge">
   </a>
